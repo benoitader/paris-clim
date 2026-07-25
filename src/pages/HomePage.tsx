@@ -113,7 +113,7 @@ export function HomePage() {
       <section id="explorer" className="mx-auto max-w-6xl scroll-mt-20 px-4 py-14 sm:px-6 sm:py-20">
         <FadeContent>
           <h2 className="font-display text-3xl italic text-ink sm:text-4xl">Explorer</h2>
-          <p className="mt-2 max-w-lg text-muted">
+          <p className="mt-2 max-w-lg text-ink-soft">
             Filtre par type ou arrondissement, puis clique un spot pour le retrouver sur la carte.
           </p>
         </FadeContent>
@@ -135,7 +135,7 @@ export function HomePage() {
         ) : null}
 
         {!isSupabaseConfigured && !loading ? (
-          <p className="mt-4 text-sm text-muted">
+          <p className="mt-4 text-sm text-ink-soft">
             Mode démo : configure Supabase (`.env`) pour charger tes vrais spots.
           </p>
         ) : null}
@@ -143,9 +143,9 @@ export function HomePage() {
         <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
           <div className="flex max-h-[480px] flex-col gap-2 overflow-y-auto pr-1">
             {loading ? (
-              <p className="text-sm text-muted">Chargement…</p>
+              <p className="text-sm text-ink-soft">Chargement…</p>
             ) : filtered.length === 0 ? (
-              <p className="text-sm text-muted">Aucun spot pour ces filtres.</p>
+              <p className="text-sm text-ink-soft">Aucun spot pour ces filtres.</p>
             ) : (
               filtered.map((place) => (
                 <PlaceCard

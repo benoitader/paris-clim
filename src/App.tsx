@@ -14,7 +14,7 @@ export default function App() {
             <Route path="/suggest" element={<SuggestPage />} />
           </Routes>
         </main>
-        <footer className="border-t border-rose-soft/30 py-6 text-center text-sm text-muted">
+        <footer className="border-t border-rose-soft/40 py-6 text-center text-sm text-ink-soft">
           paris clim — idée avec Evel · spots frais à Paris
         </footer>
       </div>

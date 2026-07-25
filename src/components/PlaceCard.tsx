@@ -21,12 +21,12 @@ export function PlaceCard({ place, selected, onSelect }: PlaceCardProps) {
       <div className="flex items-start justify-between gap-3">
         <div>
           <h3 className="font-medium text-ink">{place.name}</h3>
-          <p className="mt-0.5 text-sm text-muted">{place.address}</p>
+          <p className="mt-0.5 text-sm text-ink-soft">{place.address}</p>
           {place.notes ? (
-            <p className="mt-2 text-sm leading-snug text-muted/90">{place.notes}</p>
+            <p className="mt-2 text-sm leading-snug text-ink-soft">{place.notes}</p>
           ) : null}
         </div>
-        <span className="shrink-0 rounded-full bg-ice/80 px-2.5 py-0.5 text-xs font-medium text-ink/80">
+        <span className="shrink-0 rounded-full bg-ice px-2.5 py-0.5 text-xs font-medium text-ink">
           {PLACE_TYPE_LABELS[place.type]}
           {place.arrondissement ? ` · ${place.arrondissement}e` : ''}
         </span>

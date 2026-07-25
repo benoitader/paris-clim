@@ -27,7 +27,7 @@ export function Hero() {
           animateBy="words"
         />
         <FadeContent delay={400} className="mt-5 max-w-md">
-          <p className="text-base leading-relaxed text-muted sm:text-lg">
+          <p className="text-base leading-relaxed text-ink-soft sm:text-lg">
             Cafés, restos et refuges climatisés — une carte aérée pour tenir le coup quand la ville
             chauffe.
           </p>

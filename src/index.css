@@ -16,7 +16,7 @@
   --color-blush: #faf4f6;
   --color-frost: #f7fafc;
   --color-ink: #3d2f35;
-  --color-muted: #7a6570;
+  --color-ink-soft: #5a4550;
 }
 
 :root {
@@ -31,7 +31,7 @@
   --secondary: #ddeaf2;
   --secondary-foreground: #3d2f35;
   --muted: #faf4f6;
-  --muted-foreground: #7a6570;
+  --muted-foreground: #5a4550;
   --accent: #f2c4d0;
   --accent-foreground: #3d2f35;
   --destructive: oklch(0.577 0.245 27.325);

@@ -29,7 +29,7 @@ export function Filters({
             className={`rounded-full px-3.5 py-1.5 text-sm transition ${
               type === t
                 ? 'bg-rose-mid text-white'
-                : 'bg-white/60 text-muted ring-1 ring-rose-soft/50 hover:text-ink'
+                : 'bg-white text-ink-soft ring-1 ring-rose-mid/40 hover:bg-rose-soft/30 hover:text-ink'
             }`}
           >
             {t === 'all' ? 'Tous' : PLACE_TYPE_LABELS[t]}
@@ -38,7 +38,7 @@ export function Filters({
       </div>
 
       <div className="flex items-center gap-3">
-        <label className="flex items-center gap-2 text-sm text-muted">
+        <label className="flex items-center gap-2 text-sm text-ink-soft">
           <span className="whitespace-nowrap">Arr.</span>
           <select
             value={arrondissement === 'all' ? 'all' : String(arrondissement)}
@@ -46,7 +46,7 @@ export function Filters({
               const v = e.target.value
               onArrondissementChange(v === 'all' ? 'all' : Number(v))
             }}
-            className="rounded-full border-0 bg-white/70 px-3 py-1.5 text-ink ring-1 ring-rose-soft/50 outline-none focus:ring-rose-mid"
+            className="rounded-full border-0 bg-white px-3 py-1.5 text-ink ring-1 ring-rose-mid/40 outline-none focus:ring-rose-mid"
           >
             <option value="all">Tous</option>
             {Array.from({ length: 20 }, (_, i) => i + 1).map((n) => (
@@ -57,7 +57,9 @@ export function Filters({
             ))}
           </select>
         </label>
-        <span className="text-sm text-muted tabular-nums">{count} spot{count > 1 ? 's' : ''}</span>
+        <span className="text-sm font-medium text-ink-soft tabular-nums">
+          {count} spot{count > 1 ? 's' : ''}
+        </span>
       </div>
     </div>
   )

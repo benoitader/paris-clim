@@ -9,11 +9,11 @@ export function Header() {
         <Link to="/" className="font-display text-2xl tracking-tight text-ink italic">
           paris clim
         </Link>
-        <nav className="flex items-center gap-1 text-sm font-medium text-muted">
+        <nav className="flex items-center gap-1 text-sm font-medium text-ink-soft">
           <Link
             to="/"
             className={`rounded-full px-3 py-1.5 transition-colors ${
-              pathname === '/' ? 'bg-rose-soft/50 text-ink' : 'hover:text-ink'
+              pathname === '/' ? 'bg-rose-soft/70 text-ink' : 'hover:bg-rose-soft/30 hover:text-ink'
             }`}
           >
             Explorer
@@ -21,7 +21,7 @@ export function Header() {
           <Link
             to="/suggest"
             className={`rounded-full px-3 py-1.5 transition-colors ${
-              pathname === '/suggest' ? 'bg-rose-soft/50 text-ink' : 'hover:text-ink'
+              pathname === '/suggest' ? 'bg-rose-soft/70 text-ink' : 'hover:bg-rose-soft/30 hover:text-ink'
             }`}
           >
             Ajouter

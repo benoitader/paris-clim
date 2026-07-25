@@ -43,7 +43,7 @@ export function SuggestForm() {
     return (
       <div className="rounded-3xl bg-white/60 px-6 py-10 text-center ring-1 ring-rose-soft/40">
         <p className="font-display text-3xl italic text-ink">Merci !</p>
-        <p className="mt-2 text-muted">
+        <p className="mt-2 text-ink-soft">
           Ta suggestion est en attente de validation. Elle apparaîtra dès qu’elle sera approuvée.
         </p>
         <button
