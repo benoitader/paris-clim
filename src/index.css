@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --color-rose-soft: #f2c4d0;
+  --color-rose-mid: #e89aad;
+  --color-rose-deep: #d47890;
+  --color-ice: #ddeaf2;
+  --color-ice-deep: #b8d0e0;
+  --color-blush: #faf4f6;
+  --color-frost: #f7fafc;
+  --color-ink: #3d2f35;
+  --color-muted: #7a6570;
+}
+
+:root {
+  --background: #f7fafc;
+  --foreground: #3d2f35;
+  --card: #ffffff;
+  --card-foreground: #3d2f35;
+  --popover: #ffffff;
+  --popover-foreground: #3d2f35;
+  --primary: #e89aad;
+  --primary-foreground: #ffffff;
+  --secondary: #ddeaf2;
+  --secondary-foreground: #3d2f35;
+  --muted: #faf4f6;
+  --muted-foreground: #7a6570;
+  --accent: #f2c4d0;
+  --accent-foreground: #3d2f35;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: rgba(242, 196, 208, 0.45);
+  --input: rgba(242, 196, 208, 0.55);
+  --ring: #e89aad;
+  --chart-1: #e89aad;
+  --chart-2: #b8d0e0;
+  --chart-3: #d47890;
+  --chart-4: #ddeaf2;
+  --chart-5: #f2c4d0;
+  --radius: 0.75rem;
+  --sidebar: #faf4f6;
+  --sidebar-foreground: #3d2f35;
+  --sidebar-primary: #e89aad;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ddeaf2;
+  --sidebar-accent-foreground: #3d2f35;
+  --sidebar-border: rgba(242, 196, 208, 0.45);
+  --sidebar-ring: #e89aad;
+  color: var(--color-ink);
+  background: var(--color-frost);
+  font-family: var(--font-sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@theme inline {
+  --font-heading: var(--font-display);
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% -10%, rgba(242, 196, 208, 0.45), transparent),
+    radial-gradient(ellipse 60% 40% at 90% 10%, rgba(221, 234, 242, 0.7), transparent),
+    linear-gradient(180deg, var(--color-frost) 0%, var(--color-blush) 100%);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+#root {
+  min-height: 100svh;
+}
+
+.leaflet-container {
+  font-family: var(--font-sans);
+  z-index: 0;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+}
