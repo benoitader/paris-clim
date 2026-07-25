@@ -2,15 +2,13 @@
 
 Spots climatisés à Paris — cafés, restos, bars et refuges frais.
 
-Idée née avec [Evel](https://www.instagram.com/itsevel/) · palette rose / rose pâle / blanc glacé.
-
 ## Stack
 
 - Vite + React + TypeScript + Tailwind
-- [React Bits](https://reactbits.dev/) (Aurora, BlurText, FadeContent)
-- Supabase (Postgres + RLS)
-- Leaflet (carte)
-- Prêt pour Vercel
+- [React Bits](https://reactbits.dev/)
+- Supabase (Postgres + RLS + Edge Function)
+- Leaflet
+- Vercel
 
 ## Setup local
 
@@ -21,23 +19,23 @@ cp .env.example .env
 npm run dev
 ```
 
-## Variables d’environnement
+## Variables
 
-| Variable | Description |
-|----------|-------------|
-| `VITE_SUPABASE_URL` | URL du projet Supabase |
-| `VITE_SUPABASE_ANON_KEY` | Clé anon / publishable |
-
-Sur Vercel : Project Settings → Environment Variables → les mêmes clés.
+| Variable | Où | Description |
+|----------|-----|-------------|
+| `VITE_SUPABASE_URL` | Frontend / Vercel | URL projet Supabase |
+| `VITE_SUPABASE_ANON_KEY` | Frontend / Vercel | Clé anon |
 
 ## Modération
 
-Les suggestions arrivent en `status = pending`. Pour les publier, passe le statut à `approved` dans le [Table Editor Supabase](https://supabase.com/dashboard/project/auzhhdktmaryxqmykijq/editor).
+Page discrète (non liée dans le menu) : `/admin`  
+Protégée par un code d’accès (stocké côté Supabase, table `app_secrets`, lisible uniquement en service role).  
+Edge Function `moderate` : lister / approuver / refuser les suggestions `pending`.
 
 ## Scripts
 
 ```bash
-npm run dev      # local
-npm run build    # production
-npm run preview  # preview du build
+npm run dev
+npm run build
+npm run preview
 ```

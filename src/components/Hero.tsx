@@ -6,20 +6,18 @@ import FadeContent from '@/components/FadeContent'
 export function Hero() {
   return (
     <section className="relative isolate min-h-[88svh] overflow-hidden">
-      <div className="absolute inset-0 -z-10 opacity-80">
+      <div className="absolute inset-0 -z-10 opacity-85">
         <Aurora
-          colorStops={['#F2C4D0', '#DDEAF2', '#E89AAD']}
-          blend={0.55}
-          amplitude={0.85}
-          speed={0.45}
+          colorStops={['#9FCFE6', '#E8F5FB', '#6FAFD0']}
+          blend={0.6}
+          amplitude={0.8}
+          speed={0.4}
         />
       </div>
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-frost/20 via-transparent to-blush/90" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-frost/30 via-transparent to-blush/95" />
 
       <div className="mx-auto flex min-h-[88svh] max-w-6xl flex-col justify-end px-4 pb-16 pt-24 sm:px-6 sm:pb-20">
-        <p className="mb-4 font-display text-lg italic text-rose-deep/90 sm:text-xl">
-          paris clim
-        </p>
+        <p className="mb-4 font-display text-lg italic text-rose-deep sm:text-xl">paris clim</p>
         <BlurText
           text="Les spots frais de Paris"
           className="max-w-xl font-display text-5xl leading-[1.05] font-medium tracking-tight text-ink sm:text-6xl md:text-7xl"
@@ -28,7 +26,7 @@ export function Hero() {
         />
         <FadeContent delay={400} className="mt-5 max-w-md">
           <p className="text-base leading-relaxed text-ink-soft sm:text-lg">
-            Cafés, restos et refuges climatisés — une carte aérée pour tenir le coup quand la ville
+            Cafés, restos et refuges climatisés — une carte fraîche pour tenir le coup quand la ville
             chauffe.
           </p>
         </FadeContent>
@@ -41,7 +39,7 @@ export function Hero() {
           </a>
           <Link
             to="/suggest"
-            className="inline-flex items-center rounded-full border border-rose-mid/50 bg-white/50 px-5 py-2.5 text-sm font-medium text-ink backdrop-blur-sm transition hover:bg-white/80"
+            className="inline-flex items-center rounded-full border border-rose-mid/45 bg-white/55 px-5 py-2.5 text-sm font-medium text-ink backdrop-blur-sm transition hover:bg-white/85"
           >
             Ajouter un spot
           </Link>

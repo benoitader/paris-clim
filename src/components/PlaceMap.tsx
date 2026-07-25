@@ -8,8 +8,8 @@ const roseIcon = L.divIcon({
   className: '',
   html: `<span style="
     display:block;width:14px;height:14px;border-radius:9999px;
-    background:#E89AAD;border:2px solid #fff;
-    box-shadow:0 2px 8px rgba(61,47,53,0.25);
+    background:#6FAFD0;border:2px solid #fff;
+    box-shadow:0 2px 8px rgba(26,47,58,0.22);
   "></span>`,
   iconSize: [14, 14],
   iconAnchor: [7, 7],
@@ -19,8 +19,8 @@ const selectedIcon = L.divIcon({
   className: '',
   html: `<span style="
     display:block;width:18px;height:18px;border-radius:9999px;
-    background:#D47890;border:3px solid #fff;
-    box-shadow:0 2px 12px rgba(61,47,53,0.35);
+    background:#3D8FB5;border:3px solid #fff;
+    box-shadow:0 2px 12px rgba(26,47,58,0.32);
   "></span>`,
   iconSize: [18, 18],
   iconAnchor: [9, 9],
