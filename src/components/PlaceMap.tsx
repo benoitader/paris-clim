@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
 import L from 'leaflet'
 import type { Place } from '@/types/place'
+import { getDirectionsUrl } from '@/lib/maps'
 import 'leaflet/dist/leaflet.css'
 
 const roseIcon = L.divIcon({
@@ -71,7 +72,22 @@ export function PlaceMap({ places, selectedId, onSelect }: PlaceMapProps) {
             <Popup>
               <strong>{place.name}</strong>
               <br />
-              {place.address}
+              <a
+                href={getDirectionsUrl(place)}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {place.address}
+              </a>
+              <br />
+              <a
+                href={getDirectionsUrl(place)}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ fontSize: '12px' }}
+              >
+                Itinéraire →
+              </a>
             </Popup>
           </Marker>
         ))}
